@@ -21,6 +21,7 @@ public class WebController {
         user.setName("小明");
         user.setAge(12);
         user.setPass("123456");
+        System.out.println("小明a\n");
         return user;
     }
 
@@ -37,6 +38,7 @@ public class WebController {
         user2.setAge(12);
         user2.setPass("123456");
         users.add(user2);
+        System.out.println("小明b\n");
         return users;
     }
 

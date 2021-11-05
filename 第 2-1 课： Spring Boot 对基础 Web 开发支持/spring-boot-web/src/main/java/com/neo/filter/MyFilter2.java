@@ -16,7 +16,7 @@ public class MyFilter2 implements Filter {
 			throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		HttpServletRequest request = (HttpServletRequest) srequest;
-		System.out.println("this is MyFilter2,url :"+request.getRequestURI());
+		System.out.println("小明this is MyFilter2,url :"+request.getRequestURI());
 		filterChain.doFilter(srequest, sresponse);
 	}
 

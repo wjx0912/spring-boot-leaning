@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -22,16 +23,20 @@ public class WebControllerTest {
 
     @Test
     public void getUser() throws Exception {
-        String responseString = mockMvc.perform(MockMvcRequestBuilders.post("/getUser"))
-                .andReturn().getResponse().getContentAsString();
+        ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.post("/getUser"));
+        resultActions.andReturn().getResponse().setCharacterEncoding("UTF-8");
+        String responseString = resultActions.andReturn().getResponse().getContentAsString();
         System.out.println("result : "+responseString);
+        System.out.println("小明1\n");
     }
 
     @Test
     public void getUsers() throws Exception {
-        String responseString = mockMvc.perform(MockMvcRequestBuilders.get("/getUsers"))
-                .andReturn().getResponse().getContentAsString();
+        ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.post("/getUsers"));
+        resultActions.andReturn().getResponse().setCharacterEncoding("UTF-8");
+        String responseString = resultActions.andReturn().getResponse().getContentAsString();
         System.out.println("result : "+responseString);
+        System.out.println("小明2\n");
     }
 
 
