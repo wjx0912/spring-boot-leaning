@@ -20,5 +20,17 @@ pom.xml增加：
 
 
 
-3.
+3.pom.xml其它依赖
 
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+
+
+
+4.
