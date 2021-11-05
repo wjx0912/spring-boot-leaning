@@ -1,4 +1,16 @@
-1.MockMvc输出到控制台的是乱码
+1.spring boot版本由2.0.5.RELEASE改为2.5.6
+
+pom.xml增加：
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+
+2.MockMvc输出到控制台的是乱码
 
 普通输出中文ok，但MockMvc输出乱码，解决方法参考：
 
@@ -8,5 +20,5 @@
 
 
 
-
+3.
 
